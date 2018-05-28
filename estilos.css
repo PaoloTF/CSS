@@ -1,0 +1,195 @@
+body{
+  background-color: #02010a;
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+#contenedor{
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  flex-basis: 100%;
+}
+#section1{
+  order: 1;
+  background-color: #5b7989;
+  border-radius: 10px 10px 0 0;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  animation-duration: 1.6s;
+  animation-name: slidein;
+}
+#section1 h1{
+  text-shadow: 2px 2px black;
+  font-size: 27px;
+  display: inline-block;
+  padding-left: 10px;
+}
+#section1 a{
+  color: white;
+  float: right;
+  padding:3%;
+  font-size: 23px;
+  display: inline-block;
+}
+#section2{
+  background-color: #82c3a6;
+  max-height: 450px;
+  order:2;
+}
+#section2 img{
+  width: 85%;
+  margin: 10px auto;
+  display: block;
+  -webkit-filter:drop-shadow(2px);
+  filter:drop-shadow(3px 2px 2px black);
+}
+#section3{
+  background-color: #d5c75f;
+  height: 400px;
+  order:3
+}
+#section3 img[src*=paisaje]{
+  width: 45%;
+  height: 80%;
+  margin-top: 5%;
+  margin-left: 2.5%;
+  display: inline;
+  border: 2px solid;
+  -webkit-filter:drop-shadow(2px);
+  filter:drop-shadow(3px 2px 2px black);
+}
+#section3 img[src*=paisaje]:hover{
+  transform: rotate(10deg);
+}
+#section3 img[src*=retrato]{
+  width: 45%;
+  height: 80%;
+  margin-top: 5%;
+  margin-right: 2.5%;
+  display: inline;
+  float: right;
+  -webkit-filter:drop-shadow(2px);
+  filter:drop-shadow(3px 2px 2px black);
+  border: 2px solid;
+}
+#section3 img[src*=retrato]:hover{
+  transform: translate(15px,-5px);
+}
+#section4{
+  background-color: #C6d5c5;
+  border-radius: 0px 0px 10px 10px;
+  order: 4;
+  display: flex;
+  flex-direction: row;
+  color: black;
+  font-size: 22px;
+  text-align: center;
+}
+#pie1
+{
+  order:1;
+  flex-grow: 1;
+}
+#pie2
+{
+  order:2;
+  flex-grow: 1
+}
+#pie3
+{
+  order:3;
+  flex-grow: 1
+}
+#pie4
+{
+  order:4;
+  flex-grow: 1
+}
+@media screen and (max-width:900px) {
+  #section4{
+    flex-direction: column;
+  }
+  body{
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  #section3{
+    height: 500px;
+  }
+  #section3 img[src*=paisaje]{
+    width: 90%;
+    height: 210px;
+    margin-left: 4%;
+  }
+  #section3 img[src*=retrato]{
+    width: 90%;
+    height: 210px;
+    margin-right: 4%;
+  }
+  #section1 a{
+    padding-right: 10%;
+    text-align: center;
+  }
+  #section1 h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #sector2{
+    flex-direction: column;
+  }
+  img[id*="pai"]{
+    padding-left: 10%;
+  }
+  img[id*="ret"]{
+    padding-left: 10%;
+  }
+}
+#sector2, #sector3{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #d5c75f;
+  order:2;
+}
+#sector2 img[src*="paisaje"]{
+  height: 35%;
+  margin: 15px;
+  width: 270px;
+
+}
+#sector3 img[src*="retrato"]{
+  height: 35%;
+  margin: 15px;
+  width: 270px;
+
+}
+#pai1, #ret1{
+  -webkit-filter:blur(2px) drop-shadow(2px 2px 1px #02010a);
+  filter:blur(2px 2px) drop-shadow(2px 2px 1px #02010a);
+}
+#pai2, #pai4, #pai6, #ret2, #ret4, #ret6{
+  -webkit-filter:grayscale(100%) drop-shadow(2px 2px 1px #02010a);
+  filter:grayscale(100%) drop-shadow(2px 2px 1px #02010a);
+}
+#pai3, #ret3{
+  -webkit-filter:sepia(90%) drop-shadow(2px 2px 1px #02010a);
+  filter:sepia(90%) drop-shadow(2px 2px 1px #02010a);
+}
+#pai5, #ret5{
+  -webkit-filter:drop-shadow(2px 2px 1px #02010a);
+  filter: drop-shadow(2px 2px 1px #02010a);
+}
+@keyframes slidein {
+  0%{
+    margin-top:150%;
+  }
+  60%{
+    margin-top:-5%;
+  }
+  100%{
+    margin-top:0%;
+  }
+}
